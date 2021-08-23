@@ -3,14 +3,14 @@
     <#if section = "title">
         ${msg("loginTitle",('Ombra'))}
     <#elseif section = "header">
-       <header>
+       
+    <#elseif section = "form">
+        <header>
             <div class="d-flex flex-row justify-content-between align-items-center">
-                <h1 class="fs-5 text-light fw-light">Login</h1>
+                <h1 class="fs-5 text-light fw-light">Forgot Password</h1>
                 <img src="${url.resourcesPath}/img/cs_logo.png" alt="Cloudstaff" class="logo">
             </div>
         </header>
-    <#elseif section = "form">
-
         <#if realm.password>
 
             <div class="content">

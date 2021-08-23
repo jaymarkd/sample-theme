@@ -3,14 +3,14 @@
     <#if section = "title">
         ${msg("loginTitle",('Ombra'))}
     <#elseif section = "header">
-       <header>
+      
+    <#elseif section = "form">
+        <header>
             <div class="d-flex flex-row justify-content-between align-items-center">
                 <h1 class="fs-5 text-light fw-light">Login</h1>
                 <img src="${url.resourcesPath}/img/cs_logo.png" alt="Cloudstaff" class="logo">
             </div>
         </header>
-    <#elseif section = "form">
-
         <#if realm.password>
 
             <div class="content">
@@ -53,9 +53,11 @@
                             <input class="btn btn-primary btn-login" type="submit" value="${msg("doLogIn")}" >
                         </div>
 
-                        <div class="forgot-password text-center">
-                            <a href="${url.loginResetCredentialsUrl}">FORGOT PASSWORD</a>
-                        </div>
+                         <#if realm.resetPasswordAllowed>
+                            <div class="forgot-password text-center">
+                                <a href="${url.loginResetCredentialsUrl}">FORGOT PASSWORD</a>
+                            </div>
+                        </#if>
                         <#if realm.password && social.providers??>
                         <p class="text-center my-3 middle-text">OR LOGIN WITH</p>
                         <div class="d-flex justify-content-between gx-3 links">
