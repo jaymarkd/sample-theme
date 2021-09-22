@@ -21,7 +21,7 @@ body{
 .login{
   width: 100%;
   max-width: 1236px;
-  height: 80vh;
+  height: 90vh;
   border-radius: 10px;
   overflow: hidden;
   margin: 0 auto;
@@ -41,7 +41,7 @@ body{
 
 .login-right-panel{
     background: #FFFFFF;
-    padding: 100px 60px;
+    padding: 60px 50px;
     box-sizing: border-box;
     position: relative;
 }
