@@ -30,17 +30,27 @@
 	<body>
         <#nested "header">
 
-        <#if displayMessage && message?has_content>
-        <div class="alert alert-${message.type}" style="text-align:center;">
-             <#if message.type = 'success'><span class="${properties.kcFeedbackSuccessIcon!}"></span></#if>
-             <#if message.type = 'warning'><span class="${properties.kcFeedbackWarningIcon!}"></span></#if>
-             <#if message.type = 'error'><span class="${properties.kcFeedbackErrorIcon!}"></span></#if>
-             <#if message.type = 'info'><span class="${properties.kcFeedbackInfoIcon!}"></span></#if>
-             <span class="message-text">${message.summary?no_esc}</span>
-        </div>
-        </#if>
-        <#nested "form">
 
+         <div class="content">
+            <div class="login d-flex justify-content-between align-items-stretch">
+                <div class="login-left-panel col-6 d-flex justify-content-center align-content-center">
+                    <img src="${url.resourcesPath}/img/cs_logo.png" alt="Cloudstaff">
+                </div>
+                <div class="login-right-panel col-12 col-md-6">
+                    <h1 class="d-flex justify-content-start align-items-center"><img src="${url.resourcesPath}/img/fd_logo.png" alt="flight deck"><span>FlightDeck</span></h1>
+                    <#if displayMessage && message?has_content>
+                    <div class="alert alert-${message.type}" style="text-align:center;">
+                        <#if message.type = 'success'><span class="${properties.kcFeedbackSuccessIcon!}"></span></#if>
+                        <#if message.type = 'warning'><span class="${properties.kcFeedbackWarningIcon!}"></span></#if>
+                        <#if message.type = 'error'><span class="${properties.kcFeedbackErrorIcon!}"></span></#if>
+                        <#if message.type = 'info'><span class="${properties.kcFeedbackInfoIcon!}"></span></#if>
+                        <span class="message-text">${message.summary?no_esc}</span>
+                    </div>
+                    </#if>
+                    <#nested "form">
+                </div>
+            </div>
+        </div>
 	</body>
 </html>
 </#macro>
