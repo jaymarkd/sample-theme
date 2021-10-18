@@ -39,12 +39,14 @@
                 <div class="login-right-panel col-12 col-md-6">
                     <h1 class="d-flex justify-content-start align-items-center"><img src="${url.resourcesPath}/img/fd_logo.png" alt="flight deck"><span>FlightDeck</span></h1>
                     <#if displayMessage && message?has_content>
-                    <div class="alert alert-${message.type}" style="text-align:center;">
-                        <#if message.type = 'success'><span class="${properties.kcFeedbackSuccessIcon!}"></span></#if>
-                        <#if message.type = 'warning'><span class="${properties.kcFeedbackWarningIcon!}"></span></#if>
-                        <#if message.type = 'error'><span class="${properties.kcFeedbackErrorIcon!}"></span></#if>
-                        <#if message.type = 'info'><span class="${properties.kcFeedbackInfoIcon!}"></span></#if>
-                        <span class="message-text">${message.summary?no_esc}</span>
+                    <div class="alert-container">
+                        <div class="alert alert-${message.type}" style="text-align:center;">
+                            <#if message.type = 'success'><span class="${properties.kcFeedbackSuccessIcon!}"></span></#if>
+                            <#if message.type = 'warning'><span class="${properties.kcFeedbackWarningIcon!}"></span></#if>
+                            <#if message.type = 'error'><span class="${properties.kcFeedbackErrorIcon!}"></span></#if>
+                            <#if message.type = 'info'><span class="${properties.kcFeedbackInfoIcon!}"></span></#if>
+                            <span class="message-text">${message.summary?no_esc}</span>
+                        </div>
                     </div>
                     </#if>
                     <#nested "form">

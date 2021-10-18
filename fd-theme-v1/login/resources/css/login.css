@@ -225,6 +225,15 @@ body{
   background-color: #ffffff;
   border-color: #cc0000;
   color: #333333;
+  width: fit-content;
+}
+
+.alert-container {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
 .zocial,
