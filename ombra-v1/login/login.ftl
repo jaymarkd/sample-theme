@@ -50,7 +50,7 @@
                                 <div class="label ms-2"> ${msg("rememberMe")}</div>
                             </div>
                             </#if>
-                            <input class="btn btn-primary btn-login" type="submit" value="${msg("doLogIn")}" >
+                            <input onClick="this.form.submit(); this.disabled=true;"  class="btn btn-primary btn-login" type="submit" value="${msg("doLogIn")}" >
                         </div>
 
                          <#if realm.resetPasswordAllowed>

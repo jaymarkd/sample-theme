@@ -45,7 +45,7 @@
                         </div>
                     </#if>
                     
-                    <input class="btn btn-primary btn-login" type="submit" value="${msg("doLogIn")}" >
+                    <input onClick="this.form.submit(); this.disabled=true;" class="btn btn-primary btn-login" type="submit" value="${msg("doLogIn")}" >
                 </div>
                     <#if realm.resetPasswordAllowed>
                 <div class="fforgot-password text-center mb-5">
